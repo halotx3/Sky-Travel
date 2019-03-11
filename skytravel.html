@@ -1,0 +1,156 @@
+<!-- Demo Layout for Bootstrap (with cards) -->
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sky Travel</title>
+
+  <!-- Reset  -->
+  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+  <!-- Awesome Font -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+  <!-- Bootstrap Javascript & Css -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+  <!-- Regular CSS  -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <!-- JQuery -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+
+
+
+</head>
+
+<body>
+
+
+
+
+  <!-- Creates the Overall Grid -->
+  <div class="container-flud">
+
+   
+    <!-- First Row -->
+    <div class="row">
+
+      <!-- First (and only column) -->
+      <div class="col-md-12">
+        <!-- Header -->
+        <!-- <i class="fas fa-globe fa-6x"></i> -->
+          
+        <ul class="nav justify-content-center">
+            <h2>Sky Travel</h2>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Exchange Rate</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Weather</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Safety</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Things To Do</a>
+              </li>
+     
+          </ul>
+      </div>
+    </div>
+          
+
+    <!-- Second Row -->
+    <div class="row">
+
+      <!-- First of two columns -->
+      <!-- <div class="col-md-12 "> -->
+            <img class="p-center img mx-auto" src="img/plane-841441_1920.jpg" alt="first-img">
+            
+        <form id="home-search" class="mainBanner">
+            <div class="input-group">
+                <!-- Input for destination -->
+                <input type="text" class="form-control-lg" id="input" tabindex placeholder = "Where do you want to go?"> </input>
+                <div class="input-group-append">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1"><i class="fa fa-search"></i>
+                  </div>
+                  <input type="button" class="btn btn-primary" value="Search" id="add-symbol">
+                  </input>
+                </span>
+                </div>
+              </div>
+        </form>
+      
+      <!-- </div> -->
+
+      <!-- </div> -->
+
+    </div>
+
+         <!-- Second of two columns -->
+  <div class="row justify-content-center">
+      <div class="col-md-1"></div>
+      
+    <!-- Column Saftey -->
+         <div class="col-md-3">
+            <h1></h1>
+            <div class="card" style="width: 18rem;">
+                <img src="img/banking-business-cent-332304-word.jpg" class="card-img-top img-detail" alt="...">
+                <div class="card-body">
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+              </div>
+          </div>
+ <!-- Column Exchange -->
+          <div class="col-md-3">
+
+              <div class="card" style="width: 18rem;">
+                  <img src="img/SafeTravel.jpg" class="card-img-top img-detail" alt="...">
+                  <div class="card-body">
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  </div>
+                </div>
+                <h1></h1>
+            </div>
+             <!-- Column Weather -->
+
+            <div class="col-sm-3">
+                <h1></h1>
+                <div class="card" style="width: 18rem;">
+                    <img src="img/after-the-rain-blue-blur-1715161-wordBig.jpg" class="card-img-top img-detail" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                  </div>
+              </div>
+
+              <div class="col-md-1"></div>
+        </div>
+
+ 
+
+  <!-- JavaScript file utilizing Javascript -->
+  <script src="app.js"></script>
+
+
+</body>
+
+
+</html>

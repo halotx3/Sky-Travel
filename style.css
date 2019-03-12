@@ -27,3 +27,25 @@ h2{
 .card-body{
     border-style: none;
 }
+
+.exrate{
+      float: left;
+}
+
+.logo{
+    display: inline;
+    height: 100%;
+
+}
+
+.skysize{
+    height: 80px;
+}
+
+a{
+    font-size: 20px;
+}
+
+.navcolor{
+    background: #CBD7D7;
+}

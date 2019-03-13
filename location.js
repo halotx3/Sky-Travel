@@ -1,3 +1,10 @@
+// Pause carousel of images
+$(function(){
+    
+    $("#countryImage").carousel('pause');
+
+    });
+
 // Gathering the country information
 const validationCountry = [];
 
@@ -82,7 +89,8 @@ var newLayer = new ol.layer.Tile({
     
     // $(`.btn-primary`).on('click', displayInfo);
     displayInfo();
-    
+
+
 
 
 

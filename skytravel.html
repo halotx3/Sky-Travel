@@ -49,7 +49,7 @@
 
    
     <!-- First Row -->
-    <div class="row">
+    <div class="row sticky-top">
 
       <!-- First (and only column) -->
       <div class="col-sm-6 skysize">
@@ -61,10 +61,12 @@
 
       <div class="col-sm-6 skysize">
 
+        <!-- Exchange Rate information -->
           <div class="nav justify-content-end">
           <div class=" card exrate" style="width: 18rem;">
               <div class="card-body">
-                <h5 class="card-title">exchange rate</h5>
+                  <div id="exRate"></div>
+                <!-- <h5 class="card-title">exchange rate</h5> -->
             </div>
             </div>
           </div> 
@@ -78,7 +80,21 @@
 
       <!-- First of two columns -->
       <!-- <div class="col-md-12 "> -->
-            <img class="p-center img mx-auto" src="img/plane-841441_1920.jpg" alt="first-img">
+            
+
+            <div id="countryImage" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active" data-interval="10000">
+                      <img class="p-center img mx-auto" src="img/plane-841441_1920.jpg" alt="first-img">
+                  </div>
+                  <div class="carousel-item" data-interval="10000">
+                    <img src="img/plane-841441_1920.jpg" class="d-block w-100 p-center img mx-auto" alt="">
+                  </div>
+                  <div class="carousel-item" data-interval="10000">
+                    <img src="img/plane-841441_1920.jpg" class="d-block w-100 p-center img mx-auto" alt="">
+                  </div>
+                </div>
+              </div>
             
         <form id="home-search" class="mainBanner">
             <div class="input-group">
@@ -171,79 +187,49 @@
     
         <!-- Adding the detail based on the select country/city -->
 
-        <div class="card-columns">
+        <div class="card-deck">
             <div class="card">
-              <img src="" class="card-img-top" alt="...">
+              <!-- <img src="..." class="card-img-top" alt="..."> -->
               <div class="card-body">
-                <h5 class="card-title">Card title that wraps to a new line</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <h5 class="card-title">MAP</h5>                
+                <p class="card-text"><img class="img-thumbnail" src="img/chuttersnap-176806-unsplash-map.jpg"></p>
               </div>
             </div>
-            <!-- <div class="card p-3">
-              <blockquote class="blockquote mb-0 card-body">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                <footer class="blockquote-footer">
-                  <small class="text-muted">
-                    Someone famous in <cite title="Source Title">Source Title</cite>
-                  </small>
-                </footer>
-              </blockquote>
-            </div> -->
-            <!-- <div class="card">
-              <img src="..." class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
+               <!-- Thing to do section -->
+            <div class="card">          
+              <div id=toDo></div>
+              <!-- <div class="card-body">
+                <h5 class="card-title">Things to Do</h5>
                 <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-              </div>
-            </div> -->
-            <div class="card bg-primary text-white text-center p-3">
-              <blockquote class="blockquote mb-0">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
-                <footer class="blockquote-footer text-white">
-                  <small>
-                    Someone famous in <cite title="Source Title">Source Title</cite>
-                  </small>
-                </footer>
-              </blockquote>
-            </div>
-            <div class="card text-center">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This card has a regular title and short paragraphy of text below it.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-              </div>
+              </div> -->
             </div>
             <div class="card">
-              <img src="" class="card-img-top" alt="...">
-            </div>
-            <div class="card p-3 text-right">
-              <blockquote class="blockquote mb-0">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                <footer class="blockquote-footer">
-                  <small class="text-muted">
-                    Someone famous in <cite title="Source Title">Source Title</cite>
-                  </small>
-                </footer>
-              </blockquote>
-            </div>
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is another card with title and supporting text below. This card has some additional content to make it slightly taller overall.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+
+              <!-- Alert -->
+              <div class="card-body ">
+                <div id="safe"></div>
+                <!-- <h5 class="card-title">Travel Safety</h5> -->
+                <!-- <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p> -->
               </div>
+
+              <!-- Weather -->
+              <hr>
+              <div class="card-body ">
+                <div id="weatherA"></div>
+
+                  <!-- <h5 class="card-title">Weather</h5> -->
+                  <!-- <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p> -->
+                </div>
             </div>
           </div>
-
  
 
-  JavaScript file utilizing Javascript
+  <!-- JavaScript file utilizing Javascript -->
   <script src="weather.js"></script>
   <script src="yelp.js"></script>
   <script src="exchRate.js"></script>
   <script src="location.js"></script>
-  <!-- <script src="app.js"></script> -->
+  <script src="app.js"></script>
 
 
 </body>

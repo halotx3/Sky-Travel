@@ -7,15 +7,15 @@ $.ajax({
     console.log(response)
 })
 
-let testURL = 'https://cors-anywhere.herokuapp.com/https://www.travel-advisory.info/api'
+let testURL = 'https://www.travel-advisory.info/api'
 
-// $.ajax({
-//     url: testURL,
-//     method: 'GET',
-//     dataType: 'json'
-// }).then(function(response){
-//     console.log(response)
-// })
+$.ajax({
+    url: testURL,
+    method: 'GET',
+    dataType: 'json'
+}).then(function(response){
+    console.log(response)
+})
 
 // function createCORSRequest(method, url){
 //     var xhr = new XMLHttpRequest();

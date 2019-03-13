@@ -1,3 +1,6 @@
+//Stores the currency codes for the exchRate.js
+let conCur = [];
+
 // Pause carousel of images
 $(function(){
     
@@ -21,7 +24,7 @@ const validate = function () {
     })
       .then(function (response) {
   
- 
+        
   
         for (let i = 0; i < response.length; i++) {
   
@@ -29,6 +32,9 @@ const validate = function () {
           // console.log(stockSymbol); 
           // console.log([i]); 
           validationCountry.push(countryName);
+
+          //Stores All Currency Codes
+          conCur.push(response[i].currencies[0].code);
   
         }
         console.log(validationCountry);

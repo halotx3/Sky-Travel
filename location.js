@@ -1,5 +1,6 @@
 //Stores the currency codes for the exchRate.js
 let conCur = [];
+// Test
 
 // Gathering the country information
 const validationCountry = [];

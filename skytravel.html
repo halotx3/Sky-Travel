@@ -34,6 +34,10 @@
   <!-- JQuery -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
+  <!-- Country, City info-->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/themes/flick/jquery-ui.css" />
+   <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
 
 
 
@@ -86,16 +90,22 @@
                       <img class="p-center img mx-auto" src="img/plane-841441_1920.jpg" alt="first-img">
 
             
-        <form id="home-search" class="mainBanner">
+        <form class="mainBanner" action="" method="post" name="form_citydetails" id="form_citydetails" enctype="multipart/form-data" onsubmit="return false;">
             <div class="input-group">
                 <!-- Input for destination -->
-                <input type="text" class="form-control-lg" id="input" tabindex placeholder = "Country?"> </input>
+                <!-- new info -->
+                <!-- <form action="" method="post" name="form_citydetails" id="form_citydetails" enctype="multipart/form-data" onsubmit="return false;">
+                  <p><b>Please enter</b> city name <input class="ff_elem" type="text" name="ff_nm_from[]" value="" id="f_elem_city"/>
+                  </form>
+                  <br> -->
+                  <!-- End new info -->
+                <input type="text" class="form-control-lg ff_elem" tabindex placeholder = "Country?" name="ff_nm_from[]" value="" id="f_elem_city"> </input>
                 <div class="input-group-append">
-                    <input type="text" class="form-control-lg" id="input" tabindex placeholder = " City?"> </input>
+                    <!-- <input type="text" class="form-control-lg" id="input" tabindex placeholder = " City?"> </input> -->
                   <div class="input-group-prepend">
                     <span class="input-group-text" id="basic-addon1"><i class="fa fa-search"></i>
                   </div>
-                  <input type="button" class="btn btn-primary" value="Search" id="add-symbol get">
+                  <input type="button" class="btn btn-primary" value="Search" id="add-symbol">
                   </input>
                 </span>
                 </div>
@@ -197,7 +207,7 @@
             <div class="card">
 
               <!-- Alert -->
-              <div class="card-body ">
+              <div class="card-body">
                 <div id="safe"></div>
                 <!-- <h5 class="card-title">Travel Safety</h5> -->
                 <!-- <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p> -->

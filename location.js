@@ -3,7 +3,6 @@ let country123 = "";
 let city123 = "";
 let cccode123 = "";
 
-
 //  Label that shows in the button
 jQuery(function () 
  {
@@ -71,7 +70,27 @@ function getcitydetails(fqcn) {
                 jQuery("#geobytescurrencycode").val(data.geobytescurrencycode);
                 cccode123 = data.geobytescurrencycode;
                 console.log(cccode123);
-                
+                $.ajax({
+                  url: symbolURL,
+                  method: 'GET'
+                })
+                  .then(function (response) {
+                    for (let i = 0; i < response.length; i++) {
+                      // const countryName = (response[i]);
+                      // gets the conountry table and pushes to table validationCountry
+                      // validationCountry.push(countryName);
+                      //Stores All Currency Codes
+                      // conCur.push(response[i].alpha2Code);
+                      if(response[i].name.includes(country123)){
+                        iCode = response[i].alpha2Code;
+              
+                      }
+              
+                    }
+                    console.log(response);
+                    // console.log(conCur);
+                    console.log(iCode);
+                  });
 	            }
 	    );
     }
@@ -125,34 +144,41 @@ const newImage = function(event){
 
 // const validate = function () {
 //     // event.preventDefault(); 
+    let conCur = [];
+    let iCode ="";
+
+    const symbolURL = `https://restcountries.eu/rest/v2/all`;
+  
+    
   
   
-//     const symbolURL = `https://restcountries.eu/rest/v2/all`;
   
-//     $.ajax({
-//       url: symbolURL,
-//       method: 'GET'
-//     })
-//       .then(function (response) {
-  
- 
-  
-//         for (let i = 0; i < response.length; i++) {
-  
-//           const countryName = (response[i]);
-//             // gets the conountry table and pushes to table validationCountry
-//           validationCountry.push(countryName);
-//             //Stores All Currency Codes
-//             conCur.push(response[i].currencies[0].code);
-  
+
+// function i2code() {
+//   $.ajax({
+//     url: symbolURL,
+//     method: 'GET'
+//   })
+//     .then(function (response) {
+//       for (let i = 0; i < response.length; i++) {
+//         // const countryName = (response[i]);
+//         // gets the conountry table and pushes to table validationCountry
+//         // validationCountry.push(countryName);
+//         //Stores All Currency Codes
+//         // conCur.push(response[i].alpha2Code);
+//         if(response[i].name.includes(country123)){
+//           iCode = response[i].alpha2Code;
+
 //         }
-//         console.log(validationCountry);
-  
-//       })
-  
-  
-//   };
-//   // });
-  
+
+//       }
+//       console.log(response);
+//       console.log(conCur);
+//       console.log(iCode);
+//     });
+// }
+
+// $('#add-symbol').on('click', i2code)
+
 //   // Create the table when the table while the page loads with all the information on the country
 //   $(document).ready(validate);

@@ -3,6 +3,8 @@ let country123 = "";
 let city123 = "";
 let iCode ="";
 let region123 = "";
+let cccode123 = "";
+let countryCode = "";
 
 
 //  Label that shows in the button
@@ -48,7 +50,9 @@ function getcitydetails(fqcn) {
 	    jQuery.getJSON(
 	                "http://gd.geobytes.com/GetCityDetails?callback=?&fqcn="+cityfqcn,
                      function (data) {
-                // jQuery("#geobytesinternet").val(data.geobytesinternet);
+								// jQuery("#geobytesinternet").val(data.geobytesinternet);
+								countryCode = data.geobytesinternet;
+								console.log(`This is the Country code ${countryCode}`);
                 country123 = data.geobytescountry;
                 // console.log(country123);
 	            // jQuery("#geobytescountry").val(data.geobytescountry);
@@ -96,7 +100,6 @@ function getcitydetails(fqcn) {
  
 			}
 			console.log(response);
-			// console.log(conCur);
 			console.log(iCode);
 		});
 
@@ -110,46 +113,23 @@ function getcitydetails(fqcn) {
 // console.log(`Check out the Country Code ${cccode123}`)
 
 // ****************************Get Image of location*******************************
+// Moved to locationImg.js
+		
 
-const newImage = function(event){
-
-    // event.preventDefault(); 
-    
-    const countryPic = country123
-    const googleKey = "AAIzaSyB_S5w_dRoEXEiiJtMpQ2IL_P7IsHDUaiA"
-
-//   let locationPicURL = `https://maps.googleapis.com/maps/api/place/field/?name&key=${googleKey}`
-
-  let locationPicURL = `https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=${countryPic}&inputtype=textquery&fields=photos&key=${googleKey}`
-
-	// https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=Canada&inputtype=textquery&fields=photos&key=AIzaSyB_S5w_dRoEXEiiJtMpQ2IL_P7IsHDUaiA
-    
-    $.ajax({
-      url: locationPicURL,
-      method: 'GET'
-    })
-    
-    .then(function(response) {
-    
-
-      console.log(response);
-    
-    
-    })
-  
-    };
-    
 
 
 // Button click and the process runs after the button is clicked
 	
 $(`.btn`).on("click",function(){
-
+	$(`#landingPg`).hide();
+	$(`#linkMove`).show();
+	$(`#infoLoc`).show();
 	// newImage();
-	console.log(country123);
+	nextImage();
+	console.log(`This is the Country ${country123}`);
 	console.log(region123);
 	console.log(city123);
-	console.log(iCode);
+	console.log(`This is the Alpha2/Country Code ${iCode}`);
 
 
 });

@@ -60,4 +60,14 @@ a{
 	text-align:left;
 	font-size:14px;
 	}
-.ui-autocomplete-loading { background: white url("/images/ui-anim_basic_16x16.gif") right center no-repeat; }
+/* .ui-autocomplete-loading { background: white url("/images/ui-anim_basic_16x16.gif") right center no-repeat; } */
+
+.size{
+    width: 40%;
+}
+
+#pic{
+    background-image: url(../img/plane-841441_1920.jpg);
+    height: 700px;
+    background-position: center;
+   }

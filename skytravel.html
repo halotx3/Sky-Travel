@@ -28,8 +28,6 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 
-  <!-- Regular CSS  -->
-  <link rel="stylesheet" type="text/css" href="css/style.css">
 
   <!-- JQuery -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -40,6 +38,8 @@
    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
 
 
+  <!-- Regular CSS  -->
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 
 </head>
 
@@ -81,42 +81,36 @@
 
     <!-- Second Row -->
     <div class="row">
+        <!-- <div class="row jumbotron" id="pic"> -->
 
       <!-- First of two columns -->
-      <!-- <div class="col-md-12 "> -->
-            
+      <!-- <div class="col-md-12 "> -->           
 
-
-                      <img class="p-center img mx-auto" src="img/plane-841441_1920.jpg" alt="first-img">
-
-            
-        <form class="mainBanner" action="" method="post" name="form_citydetails" id="form_citydetails" enctype="multipart/form-data" onsubmit="return false;">
-            <div class="input-group">
+        <div id="mainPic">
+       <!-- <img class="p-center img mx-auto" src="img/plane-841441_1920.jpg" alt="first-img" id="mainPic"> -->
+      </div>
+                    
+    <form class="mainBanner"  action="" method="post" name="form_citydetails" id="form_citydetails" enctype="multipart/form-data" onsubmit="return false;">          
+        <!-- <form  action="" method="post" name="form_citydetails" id="form_citydetails" enctype="multipart/form-data" onsubmit="return false;"> -->
+            <div class="input-group ">
                 <!-- Input for destination -->
                 <!-- new info -->
-                <!-- <form action="" method="post" name="form_citydetails" id="form_citydetails" enctype="multipart/form-data" onsubmit="return false;">
-                  <p><b>Please enter</b> city name <input class="ff_elem" type="text" name="ff_nm_from[]" value="" id="f_elem_city"/>
-                  </form>
-                  <br> -->
-                  <!-- End new info -->
-                <input type="text" class="form-control-lg ff_elem" tabindex placeholder = "Country?" name="ff_nm_from[]" value="" id="f_elem_city"> </input>
-                <div class="input-group-append">
+                <input type="text" class="form-control-lg ff_elem" tabindex placeholder = "Where would you like to go?" name="ff_nm_from[]" value="" id="f_elem_city"> </input>
+                <div class="input-group-append ">
                     <!-- <input type="text" class="form-control-lg" id="input" tabindex placeholder = " City?"> </input> -->
-                  <div class="input-group-prepend">
+                  <!-- <div class="input-group-prepend">
                     <span class="input-group-text" id="basic-addon1"><i class="fa fa-search"></i>
-                  </div>
+                  </div> -->
                   <input type="button" class="btn btn-primary" value="Search" id="add-symbol">
                   </input>
                 </span>
                 </div>
               </div>
         </form>
-      
-
     </div>
 
     <!-- Third row -->
-    <div class="row">
+    <div class="row" id="linkMove">
 
         <!-- Information about the location -->
         <div class="col-md-12 navcolor">
@@ -147,7 +141,7 @@
       <!-- End of Location Section -->
 
          <!-- Second of two columns -->
-  <div class="row justify-content-center">
+  <div class="row justify-content-center" id="landingPg">
       <div class="col-md-1"></div>
       
     <!-- Column Exchange -->
@@ -188,7 +182,7 @@
     
         <!-- Adding the detail based on the select country/city -->
 
-        <div class="card-deck">
+        <div class="card-deck" id="infoLoc">
             <div class="card">
               <!-- <img src="..." class="card-img-top" alt="..."> -->
               <div class="card-body">
@@ -226,10 +220,12 @@
  
 
   <!-- JavaScript file utilizing Javascript -->
-  <!-- <script src="weather.js"></script> -->
+  <!-- <script src="weatherAPP.js"></script> -->
   <!-- <script src="yelp.js"></script> -->
   <!-- <script src="exchRate.js"></script> -->
+  <script src="locationImg.js"></script>
   <script src="location.js"></script>
+
   <!-- <script src="app.js"></script> -->
 
 

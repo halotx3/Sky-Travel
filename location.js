@@ -1,7 +1,10 @@
 // Global Variables
 let country123 = "";
 let city123 = "";
+let iCode ="";
+let region123 = "";
 let cccode123 = "";
+let countryCode = "";
 
 
 //  Label that shows in the button
@@ -47,30 +50,59 @@ function getcitydetails(fqcn) {
 	    jQuery.getJSON(
 	                "http://gd.geobytes.com/GetCityDetails?callback=?&fqcn="+cityfqcn,
                      function (data) {
-                jQuery("#geobytesinternet").val(data.geobytesinternet);
+								// jQuery("#geobytesinternet").val(data.geobytesinternet);
+								countryCode = data.geobytesinternet;
+								console.log(`This is the Country code ${countryCode}`);
                 country123 = data.geobytescountry;
-                console.log(country123);
-	            jQuery("#geobytescountry").val(data.geobytescountry);
-	            jQuery("#geobytesregionlocationcode").val(data.geobytesregionlocationcode);
-	            jQuery("#geobytesregion").val(data.geobytesregion);
-	            jQuery("#geobyteslocationcode").val(data.geobyteslocationcode);
-                jQuery("#geobytescity").val(data.geobytescity);
+                // console.log(country123);
+	            // jQuery("#geobytescountry").val(data.geobytescountry);
+	            // jQuery("#geobytesregionlocationcode").val(data.geobytesregionlocationcode);
+							// jQuery("#geobytesregion").val(data.geobytesregion);
+							region123 = data.geobytesregion;
+							// console.log(region123);
+	            // jQuery("#geobyteslocationcode").val(data.geobyteslocationcode);
+                // jQuery("#geobytescity").val(data.geobytescity);
                 city123 = data.geobytescity;
-                console.log(city123);
-	            jQuery("#geobytescityid").val(data.geobytescityid);
-	            jQuery("#geobytesfqcn").val(data.geobytesfqcn);
-	            jQuery("#geobyteslatitude").val(data.geobyteslatitude);
-	            jQuery("#geobyteslongitude").val(data.geobyteslongitude);
-	            jQuery("#geobytescapital").val(data.geobytescapital);
-	            jQuery("#geobytestimezone").val(data.geobytestimezone);
-	            jQuery("#geobytesnationalitysingular").val(data.geobytesnationalitysingular);
-	            jQuery("#geobytespopulation").val(data.geobytespopulation);
-	            jQuery("#geobytesnationalityplural").val(data.geobytesnationalityplural);
-	            jQuery("#geobytesmapreference").val(data.geobytesmapreference);
-	            jQuery("#geobytescurrency").val(data.geobytescurrency);
-                jQuery("#geobytescurrencycode").val(data.geobytescurrencycode);
+                // console.log(city123);
+	            // jQuery("#geobytescityid").val(data.geobytescityid);
+	            // jQuery("#geobytesfqcn").val(data.geobytesfqcn);
+	            // jQuery("#geobyteslatitude").val(data.geobyteslatitude);
+	            // jQuery("#geobyteslongitude").val(data.geobyteslongitude);
+	            // jQuery("#geobytescapital").val(data.geobytescapital);
+	            // jQuery("#geobytestimezone").val(data.geobytestimezone);
+	            // jQuery("#geobytesnationalitysingular").val(data.geobytesnationalitysingular);
+	            // jQuery("#geobytespopulation").val(data.geobytespopulation);
+	            // jQuery("#geobytesnationalityplural").val(data.geobytesnationalityplural);
+	            // jQuery("#geobytesmapreference").val(data.geobytesmapreference);
+	            // jQuery("#geobytescurrency").val(data.geobytescurrency);
+                // jQuery("#geobytescurrencycode").val(data.geobytescurrencycode);
                 cccode123 = data.geobytescurrencycode;
-                console.log(cccode123);
+								// console.log(cccode123);
+								
+	// Adding the API call to get the 2 code
+	const symbolURL = `https://restcountries.eu/rest/v2/all`;
+
+	$.ajax({
+		url: symbolURL,
+		method: 'GET'
+	})
+		.then(function (response) {
+			for (let i = 0; i < response.length; i++) {
+				// const countryName = (response[i]);
+				// gets the conountry table and pushes to table validationCountry
+				// validationCountry.push(countryName);
+				//Stores All Currency Codes
+				// conCur.push(response[i].alpha2Code);
+				if(response[i].name.includes(country123)){
+					iCode = response[i].alpha2Code;
+ 
+				}
+ 
+			}
+			console.log(response);
+			console.log(iCode);
+		});
+
                 
 	            }
 	    );
@@ -81,78 +113,23 @@ function getcitydetails(fqcn) {
 // console.log(`Check out the Country Code ${cccode123}`)
 
 // ****************************Get Image of location*******************************
-
-const newImage = function(event){
-
-    // event.preventDefault(); 
-    
-    const countryPic = "Mexico"
-    const googleKey = "AAIzaSyB_S5w_dRoEXEiiJtMpQ2IL_P7IsHDUaiA"
-
-//   let locationPicURL = `https://maps.googleapis.com/maps/api/place/field/?name&key=${googleKey}`
-
-  let locationPicURL = `https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=${countryPic}&inputtype=textquery&fields=photos&key=${googleKey}`
-//   https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=CnRtAAAATLZNl354RwP_9UKbQ_5Psy40texXePv4oAlgP4qNEkdIrkyse7rPXYGd9D_Uj1rVsQdWT4oRz4QrYAJNpFX7rzqqMlZw2h2E2y5IKMUZ7ouD_SlcHxYq1yL4KbKUv3qtWgTK0A6QbGh87GB3sscrHRIQiG2RrmU_jF4tENr9wGS_YxoUSSDrYjWmrNfeEHSGSc3FyhNLlBU&key=YOUR_API_KEY
-
-    
-    $.ajax({
-      url: locationPicURL,
-      method: 'GET'
-    })
-    
-    .then(function(response) {
-    
-
-      console.log(response);
-    
-    
-    })
-  
-    };
-    
-// Get the new image information check
-    // newImage();
+// Moved to locationImg.js
+		
 
 
-// ***************************Original code for country information**********************************************
-// //Stores the currency codes for the exchRate.js
-// let conCur = [];
-// // Test
 
-// // Gathering the country information
-// const validationCountry = [];
+// Button click and the process runs after the button is clicked
+	
+$(`.btn`).on("click",function(){
+	$(`#landingPg`).hide();
+	$(`#linkMove`).show();
+	$(`#infoLoc`).show();
+	// newImage();
+	nextImage();
+	console.log(`This is the Country ${country123}`);
+	console.log(region123);
+	console.log(city123);
+	console.log(`This is the Alpha2/Country Code ${iCode}`);
 
 
-// const validate = function () {
-//     // event.preventDefault(); 
-  
-  
-//     const symbolURL = `https://restcountries.eu/rest/v2/all`;
-  
-//     $.ajax({
-//       url: symbolURL,
-//       method: 'GET'
-//     })
-//       .then(function (response) {
-  
- 
-  
-//         for (let i = 0; i < response.length; i++) {
-  
-//           const countryName = (response[i]);
-//             // gets the conountry table and pushes to table validationCountry
-//           validationCountry.push(countryName);
-//             //Stores All Currency Codes
-//             conCur.push(response[i].currencies[0].code);
-  
-//         }
-//         console.log(validationCountry);
-  
-//       })
-  
-  
-//   };
-//   // });
-  
-//   // Create the table when the table while the page loads with all the information on the country
-//   $(document).ready(validate);
+});

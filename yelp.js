@@ -31,7 +31,7 @@ const runRestaurants = function (event){
 
   let location = value
   let restaurants = $('#restaurants').text();
-
+  console.log(`Checking.....${restaurants}`)
   const url = `https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?&term=${restaurants}&location=${location}&limit=5`
   let apiKey = 'Eg5mm-1rhlDzCfKO0hWK76f3iUiRBjk1EDj1yL4SysqyFHmzWCzRTVj0JEfBMuIOX7d1YmaVkKqBoE4kXvZLfawK6DO3uhegkyU7kDRqRDPqI69AqIUrYxkCaw6DXHYx'
 

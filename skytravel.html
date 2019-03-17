@@ -28,8 +28,6 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 
-  <!-- Regular CSS  -->
-  <link rel="stylesheet" type="text/css" href="css/style.css">
 
   <!-- JQuery -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -52,7 +50,7 @@
   <!-- Creates the Overall Grid -->
   <div class="container-flud">
 
-   
+
     <!-- First Row -->
     <div class="row sticky-top">
 
@@ -61,7 +59,7 @@
         <!-- Header -->
         <!-- <i class="fas fa-globe fa-8x"> </i> -->
         <img class="logo" src="img/skyTlogo.jpg">
-        
+
       </div>
 
       <div class="col-sm-6 skysize">
@@ -74,34 +72,34 @@
                 <!-- <h5 class="card-title">exchange rate</h5> -->
             </div>
             </div>
-          </div> 
+          </div>
           <!-- End of the nav bar -->
-        </div> 
+        </div>
     </div>
-          
+
 
     <!-- Second Row -->
     <div class="row">
         <!-- <div class="row jumbotron" id="pic"> -->
 
       <!-- First of two columns -->
-      <!-- <div class="col-md-12 "> -->           
+      <!-- <div class="col-md-12 "> -->
 
+        <div id="mainPic">
+       <!-- <img class="p-center img mx-auto" src="img/plane-841441_1920.jpg" alt="first-img" id="mainPic"> -->
+      </div>
 
-       <img class="p-center img mx-auto" src="img/plane-841441_1920.jpg" alt="first-img">
-
-                    
-    <form class="mainBanner"  action="" method="post" name="form_citydetails" id="form_citydetails" enctype="multipart/form-data" onsubmit="return false;">          
+    <form class="mainBanner"  action="" method="post" name="form_citydetails" id="form_citydetails" enctype="multipart/form-data" onsubmit="return false;">
         <!-- <form  action="" method="post" name="form_citydetails" id="form_citydetails" enctype="multipart/form-data" onsubmit="return false;"> -->
-            <div class="input-group">
+            <div class="input-group ">
                 <!-- Input for destination -->
                 <!-- new info -->
                 <input type="text" class="form-control-lg ff_elem" tabindex placeholder = "Where would you like to go?" name="ff_nm_from[]" value="" id="f_elem_city"> </input>
-                <div class="input-group-append">
+                <div class="input-group-append ">
                     <!-- <input type="text" class="form-control-lg" id="input" tabindex placeholder = " City?"> </input> -->
-                  <div class="input-group-prepend">
+                  <!-- <div class="input-group-prepend">
                     <span class="input-group-text" id="basic-addon1"><i class="fa fa-search"></i>
-                  </div>
+                  </div> -->
                   <input type="button" class="btn btn-primary" value="Search" id="add-symbol">
                   </input>
                 </span>
@@ -111,11 +109,11 @@
     </div>
 
     <!-- Third row -->
-    <div class="row">
+    <div class="row" id="linkMove">
 
         <!-- Information about the location -->
         <div class="col-md-12 navcolor">
-            
+
           <ul class="nav justify-content-center ">
               <li class="nav-item" id="restaurants">
                 <a class="nav-link active" href="#">Restaurants</a>
@@ -126,10 +124,10 @@
               <li class="nav-item" id="historic">
                 <a class="nav-link" href="#">Historic</a>
               </li>
-              <li class="nav-item" id="bar">
-                  <a class="nav-link" href="#">Bar</a>
+              <li class="nav-item" id="bars">
+                  <a class="nav-link" href="#">Nightlife</a>
                 </li>
-       
+
             </ul>
         </div>
       </div>
@@ -142,9 +140,9 @@
       <!-- End of Location Section -->
 
          <!-- Second of two columns -->
-  <div class="row justify-content-center">
+  <div class="row justify-content-center" id="landingPg">
       <div class="col-md-1"></div>
-      
+
     <!-- Column Exchange -->
          <div class="col-md-3">
             <h1></h1>
@@ -180,19 +178,19 @@
 
               <div class="col-md-1"></div>
         </div>
-    
+
         <!-- Adding the detail based on the select country/city -->
 
-        <div class="card-deck">
+        <div class="card-deck" id="infoLoc">
             <div class="card">
               <!-- <img src="..." class="card-img-top" alt="..."> -->
               <div class="card-body">
-                <h5 class="card-title">MAP</h5>                
+                <h5 class="card-title">MAP</h5>
                 <p class="card-text"><img class="img-thumbnail" src="img/chuttersnap-176806-unsplash-map.jpg"></p>
               </div>
             </div>
                <!-- Thing to do section -->
-            <div class="card">          
+            <div class="card">
               <div id="toDo"></div>
               <!-- <div class="card-body">
                 <h5 class="card-title">Things to Do</h5>
@@ -218,13 +216,15 @@
                 </div>
             </div>
           </div>
- 
+
 
   <!-- JavaScript file utilizing Javascript -->
-  <!-- <script src="weather.js"></script> -->
+  <!-- <script src="weatherAPP.js"></script> -->
   <!-- <script src="yelp.js"></script> -->
-  <script src="exchRate.js"></script>
+  <!-- <script src="exchRate.js"></script> -->
+  <script src="locationImg.js"></script>
   <script src="location.js"></script>
+
   <!-- <script src="app.js"></script> -->
 
 

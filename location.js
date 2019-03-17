@@ -3,6 +3,8 @@ let country123 = "";
 let city123 = "";
 let iCode ="";
 let region123 = "";
+let cccode123 = "";
+
 
 //  Label that shows in the button
 jQuery(function () 

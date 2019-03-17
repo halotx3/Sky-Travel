@@ -5,7 +5,7 @@
 }
 
 h2{
-    
+
 }
 
 .mainBanner{
@@ -71,3 +71,7 @@ a{
     height: 700px;
     background-position: center;
    }
+#toDo {
+  padding-top: 20px;
+  padding-left: 20px;
+}

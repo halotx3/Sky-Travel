@@ -17,9 +17,11 @@ h2{
     padding-left: 16px;
     padding-right: 16px;
     /* margin-bottom: 150px; */
-
 }
 
+.lat {
+  opacity: 0;
+}
 .img-detail{
     border-radius: 20%;
 }

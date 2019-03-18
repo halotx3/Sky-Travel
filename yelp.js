@@ -1,4 +1,6 @@
-let value ='';
+let value = '';
+let latitude = '';
+let longitude = '';
 
 
 const enterCountry = function (){
@@ -14,13 +16,13 @@ const enterCountry = function (){
     $('#f_elem_city').val('')
 
     value = city_state
-    console.log(value)
+
   }
    else {
     console.log("appending country")
     $('#f_elem_city').val('')
      value = city_country
-     console.log(value)
+
   }
 }
 
@@ -30,7 +32,6 @@ const runRestaurants = function (event){
 
   let location = value
   let restaurants = $('#restaurants').text();
-  console.log(`Checking.....${restaurants}`)
   const url = `https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?&term=${restaurants}&location=${location}&limit=5`
   let apiKey = 'Eg5mm-1rhlDzCfKO0hWK76f3iUiRBjk1EDj1yL4SysqyFHmzWCzRTVj0JEfBMuIOX7d1YmaVkKqBoE4kXvZLfawK6DO3uhegkyU7kDRqRDPqI69AqIUrYxkCaw6DXHYx'
 
@@ -43,13 +44,15 @@ const runRestaurants = function (event){
   }).then(function(data) {
     const businesses = data.businesses
      for (let i = 0; i < businesses.length; i++){
-       console.log(businesses)
        if (businesses[i].rating >= 4){
-       $('#toDo').append(`<img class="images" src="${businesses[i].image_url}"  width="180" height="180"></img><br>`);
-       $('#toDo').append(`<h3>${businesses[i].name}</h3>`);
-       $('#toDo').append(`<p>Address: ${businesses[i].location.address1}</p>`);
-       $('#toDo').append(`<p>City: ${businesses[i].location.city}</p>`);
-       $('#toDo').append(`<p>Phone: ${businesses[i].phone}</p>`);
+         console.log(businesses)
+       $('#toDo').append(`<img class="float-right images" src="${businesses[i].image_url}"  width="180" height="180"></img><br><br><br>`);
+       $('#toDo').append(`<h2 class="card-title bg-light">${businesses[i].name}</h2>`);
+       $('#toDo').append(`<p>${businesses[i].location.address1}</p>`);
+       $('#toDo').append(`<p>${businesses[i].location.city}, ${businesses[i].location.state}</p>`);
+       $('#toDo').append(`<p>${businesses[i].phone}</p>`);
+       latitude = businesses[i].coordinates.latitude
+       longitude = businesses[i].coordinates.longitude;
        }
     }
   })
@@ -74,11 +77,13 @@ const runEntertainment = function (event){
     const businesses = data.businesses
     for (let i = 0; i < businesses.length; i++){
       if (businesses[i].rating = 5){
-      $('#toDo').append(`<img class="images" src="${businesses[i].image_url}" width="180" height="180"></img>`);
-      $('#toDo').append(`<h3>${businesses[i].name}</h3>`);
-      $('#toDo').append(`<p>Address: ${businesses[i].location.address1}</p>`);
-      $('#toDo').append(`<p>City: ${businesses[i].location.city}</p>`);
-      $('#toDo').append(`<p>Phone: ${businesses[i].phone}</p>`);
+      $('#toDo').append(`<img class="float-right images" src="${businesses[i].image_url}" width="180" height="180"></img><br><br><br>`);
+      $('#toDo').append(`<h2 class="card-title bg-light">${businesses[i].name}</h2>`);
+      $('#toDo').append(`<p> ${businesses[i].location.address1}</p>`);
+      $('#toDo').append(`<p> ${businesses[i].location.city}</p>`);
+      $('#toDo').append(`<p> ${businesses[i].phone}</p>`);
+      latitude = businesses[i].coordinates.latitude
+      longitude = businesses[i].coordinates.longitude;
       }
     }
 })
@@ -103,11 +108,13 @@ const runHistoric = function (event){
     const businesses = data.businesses
     for (let i = 0; i < businesses.length; i++){
       if (businesses[i].rating >= 4){
-      $('#toDo').append(`<img class="images" src="${businesses[i].image_url}" width="180" height="180"></img>`);
-      $('#toDo').append(`<h3>${businesses[i].name}</h3>`);
-      $('#toDo').append(`<p>Address: ${businesses[i].location.address1}</p>`);
-      $('#toDo').append(`<p>City: ${businesses[i].location.city}</p>`);
-      $('#toDo').append(`<p>Phone: ${businesses[i].phone}</p>`);
+      $('#toDo').append(`<img class="float-right images" src="${businesses[i].image_url}" width="180" height="180"></img><br><br><br>`);
+      $('#toDo').append(`<h2 class="card-title bg-light">${businesses[i].name}</h2>`);
+      $('#toDo').append(`<p> ${businesses[i].location.address1}</p>`);
+      $('#toDo').append(`<p> ${businesses[i].location.city}</p>`);
+      $('#toDo').append(`<p> ${businesses[i].phone}</p>`);
+      $('#toDo').append(`<p class="lat"> ${businesses[i].coordinates.latitude}</p>`)
+      $('#toDo').append(`<p> ${businesses[i].coordinates.longitude}</p>`);
       }
     }
 })
@@ -130,12 +137,14 @@ const runNightLife = function (event){
   }).then(function(data) {
     const businesses = data.businesses
     for (let i = 0; i < businesses.length; i++){
-      if (businesses[i].rating >= 4){
-      $('#toDo').append(`<img class="images" src="${businesses[i].image_url}" width="180" height="180"></img>`);
-      $('#toDo').append(`<h3>${businesses[i].name}</h3>`);
-      $('#toDo').append(`<p>Address: ${businesses[i].location.address1}</p>`);
-      $('#toDo').append(`<p>City: ${businesses[i].location.city}</p>`);
-      $('#toDo').append(`<p>Phone: ${businesses[i].phone}</p>`);
+      if (businesses[i].rating >= 3){
+      $('#toDo').append(`<img class="float-right images" src="${businesses[i].image_url}" width="180" height="180"></img><br><br><br>`);
+      $('#toDo').append(`<h2 class="card-title bg-light">${businesses[i].name}</h2>`);
+      $('#toDo').append(`<p> ${businesses[i].location.address1}</p>`);
+      $('#toDo').append(`<p> ${businesses[i].location.city}</p>`);
+      $('#toDo').append(`<p> ${businesses[i].phone}</p>`);
+      latitude = businesses[i].coordinates.latitude
+      longitude = businesses[i].coordinates.longitude;
       }
     }
   })

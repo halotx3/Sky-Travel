@@ -17,9 +17,11 @@ h2{
     padding-left: 16px;
     padding-right: 16px;
     /* margin-bottom: 150px; */
-
 }
 
+.lat {
+  opacity: 0;
+}
 .img-detail{
     border-radius: 20%;
 }
@@ -71,7 +73,7 @@ a{
     height: 700px;
     background-position: center;
    }
-#toDo {
+#toDo,#maps {
   padding-top: 20px;
   padding-left: 20px;
 }

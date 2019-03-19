@@ -114,24 +114,25 @@
     <!-- Third row -->
     <div class="row" id="linkMove">
 
-      <!-- Information about the location -->
-      <div class="col-md-12 navcolor">
+        <!-- Information about the location -->
+        <div class="col-md-12 navcolor">
 
-        <ul class="nav justify-content-center ">
-          <li class="nav-item" id="restaurants">
-            <a class="nav-link active" href="#">Restaurants</a>
-          </li>
-          <li class="nav-item" id="entertainment">
-            <a class="nav-link" href="#">Entertainment</a>
-          </li>
-          <li class="nav-item" id="historic">
-            <a class="nav-link" href="#">Historic</a>
-          </li>
-          <li class="nav-item" id="bars">
-            <a class="nav-link" href="#">Nightlife</a>
-          </li>
+          <ul class="nav justify-content-center ">
+              <li class="nav-item" id="restaurants">
+                <a class="nav-link active" href="#">Restaurants</a>
+              </li>
+              <li class="nav-item" id="entertainment">
+                <a class="nav-link" href="#">Entertainment</a>
+              </li>
+              <li class="nav-item" id="historic">
+                <a class="nav-link" href="#">Historic</a>
+              </li>
+              <li class="nav-item" id="nightlife">
+                  <a class="nav-link" href="#">Nightlife</a>
+                </li>
 
-        </ul>
+            </ul>
+        </div>
       </div>
     </div>
 
@@ -185,27 +186,28 @@
       <div class="col-md-1"></div>
     </div>
 
-    <!-- Adding the detail based on the select country/city -->
+        <div class="card-deck" id="infoLoc">
+            <div class="card">
+              <!-- <img src="..." class="card-img-top" alt="..."> -->
+          <div id="maps">
+            <iframe width="500" height="450" frameborder="0" src="https://www.bing.com/maps/embed?h=400&w=500&cp=33.8611~-84.6827&lvl=11&typ=d&sty=r&src=SHELL&FORM=MBEDV8" scrolling="no">
+            </iframe>
+            <div style="white-space: nowrap; text-align: center; width: 500px; padding: 6px 0;">
+              <!-- <a id="largeMapLink" target="_blank" href="https://www.bing.com/maps?cp=33.8611~-84.6827&amp;sty=r&amp;lvl=11&amp;FORM=MBEDLD">View Larger Map</a> &nbsp; | &nbsp; -->
+              <!-- <a id="dirMapLink" target="_blank" href="https://www.bing.com/maps/directions?cp=33.8611~-84.6827&amp;sty=r&amp;lvl=11&amp;rtp=~pos.33.8611_-84.6827____&amp;FORM=MBEDLD">Get Directions</a> -->
+            </div>
+          </div>
+            </div>
+               <!-- Thing to do section -->
+            <div class="card">
+              <div class="col-sm-8 card-title" id="toDo"></div>
+              <div class="col-sm-4 card-body"></div>
 
-    <div class="card-deck" id="infoLoc">
-      <div class="card">
-        <!-- <img src="..." class="card-img-top" alt="..."> -->
-        <div class="card-body">
-          <h5 class="card-title">MAP</h5>
-          <p class="card-text"><img class="img-thumbnail" src="img/chuttersnap-176806-unsplash-map.jpg"></p>
-        </div>
-      </div>
-      <!-- Thing to do section -->
-      <div class="card">
-        <div id="toDo"></div>
-        <!-- <div class="card-body">
-                <h5 class="card-title">Things to Do</h5>
-                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-              </div> -->
-      </div>
-      <div class="card">
+            </div>
+            </div>
+            <div class="card">
 
-        <!-- Alert -->
+              <!-- Alert -->
         <div class="card-body">
           <div id="safe"></div>
           <h5 class="card-title">TRAVEL SAFETY ADVISORY</h5>
@@ -238,25 +240,26 @@
           <!-- Saftey table card format end  -->
         </div>
 
-        <!-- Weather -->
-        <hr>
-        <div class="card-body ">
-          <div id="weatherA"></div>
-        </hr>
-          <!-- <h5 class="card-title">Weather</h5> -->
-          <!-- <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p> -->
-        </div>
-      </div>
-    </div>
+              <!-- Weather -->
+              <hr>
+              <div class="card-body ">
+                <div id="weatherA"></div>
+
+                  <!-- <h5 class="card-title">Weather</h5> -->
+                  <!-- <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p> -->
+                </div>
+            </div>
+          </div>
 
 
-    <!-- JavaScript file utilizing Javascript -->
-    <!-- <script src="weatherAPP.js"></script> -->
-    <!-- <script src="yelp.js"></script> -->
-    <!-- <script src="exchRate.js"></script> -->
-    <script src="safety.js"></script>
-    <script src="locationImg.js"></script>
-    <script src="location.js"></script>
+  <!-- JavaScript file utilizing Javascript -->
+  <!-- <script src="weatherAPP.js"></script> -->
+  <script src="yelp.js"></script>
+  <script src="map.js"></script>
+  <!-- <script src="exchRate.js"></script> -->
+  <script src="locationImg.js"></script>
+  <script src="location.js"></script>
+  <script src="safety.js"></script>
 
     <!-- <script src="app.js"></script> -->
 

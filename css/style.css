@@ -8,17 +8,33 @@ h2{
 
 }
 
+/* Made modifications here */
+
 .mainBanner{
-    position: fixed;
+    position: relative;
     z-index: 999;
     margin-left: 35%;
-    top: 20%;
+    top: -322px;
     min-height: 1px;
     padding-left: 16px;
     padding-right: 16px;
     /* margin-bottom: 150px; */
 }
 
+
+
+.form-control-lg {
+
+    width: 354px;
+}
+
+.card-deck .card{
+
+    margin-right: 0;
+    margin-left: 0;
+}
+
+/* End modifications */
 .lat {
   opacity: 0;
 }
@@ -104,7 +120,7 @@ a{
 }
 
 /* Safety CSS design end */
-#toDo,#maps {
+#toDo {
   padding-top: 20px;
   padding-left: 20px;
 }

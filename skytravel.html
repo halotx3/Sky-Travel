@@ -35,7 +35,7 @@
   <!-- Country, City info-->
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script>
   <link rel="stylesheet" href="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/themes/flick/jquery-ui.css" />
-   <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
 
 
   <!-- Regular CSS  -->
@@ -66,167 +66,199 @@
       <div class="col-sm-6 skysize">
 
         <!-- Exchange Rate information -->
-          <div class="nav justify-content-end">
+        <div class="nav justify-content-end">
           <div class=" card exrate" style="width: 18rem;">
-              <div class="card-body">
-                  <div id="exRate"></div>
-                <!-- <h5 class="card-title">exchange rate</h5> -->
-            </div>
+            <div class="card-body">
+              <div id="exRate"></div>
+              <!-- <h5 class="card-title">exchange rate</h5> -->
             </div>
           </div>
-          <!-- End of the nav bar -->
         </div>
+        <!-- End of the nav bar -->
+      </div>
     </div>
 
 
     <!-- Second Row -->
     <div class="row">
-        <!-- <div class="row jumbotron" id="pic"> -->
+      <!-- <div class="row jumbotron" id="pic"> -->
 
       <!-- First of two columns -->
       <!-- <div class="col-md-12 "> -->
 
-        <div id="mainPic">
-       <!-- <img class="p-center img mx-auto" src="img/plane-841441_1920.jpg" alt="first-img" id="mainPic"> -->
+      <div id="mainPic">
+        <!-- <img class="p-center img mx-auto" src="img/plane-841441_1920.jpg" alt="first-img" id="mainPic"> -->
       </div>
 
-    <form class="mainBanner"  action="" method="post" name="form_citydetails" id="form_citydetails" enctype="multipart/form-data" onsubmit="return false;">
+      <form class="mainBanner" action="" method="post" name="form_citydetails" id="form_citydetails"
+        enctype="multipart/form-data" onsubmit="return false;">
         <!-- <form  action="" method="post" name="form_citydetails" id="form_citydetails" enctype="multipart/form-data" onsubmit="return false;"> -->
-            <div class="input-group ">
-                <!-- Input for destination -->
-                <!-- new info -->
-                <input type="text" class="form-control-lg ff_elem" tabindex placeholder = "Where would you like to go?" name="ff_nm_from[]" value="" id="f_elem_city"> </input>
-                <div class="input-group-append ">
-                    <!-- <input type="text" class="form-control-lg" id="input" tabindex placeholder = " City?"> </input> -->
-                  <!-- <div class="input-group-prepend">
+        <div class="input-group ">
+          <!-- Input for destination -->
+          <!-- new info -->
+          <input type="text" class="form-control-lg ff_elem" tabindex placeholder="Where would you like to go?"
+            name="ff_nm_from[]" value="" id="f_elem_city"> </input>
+          <div class="input-group-append ">
+            <!-- <input type="text" class="form-control-lg" id="input" tabindex placeholder = " City?"> </input> -->
+            <!-- <div class="input-group-prepend">
                     <span class="input-group-text" id="basic-addon1"><i class="fa fa-search"></i>
                   </div> -->
-                  <input type="button" class="btn btn-primary" value="Search" id="add-symbol">
-                  </input>
-                </span>
-                </div>
-              </div>
-        </form>
+            <input type="button" class="btn btn-primary" value="Search" id="add-symbol">
+            </input>
+            </span>
+          </div>
+        </div>
+      </form>
     </div>
 
     <!-- Third row -->
     <div class="row" id="linkMove">
 
-        <!-- Information about the location -->
-        <div class="col-md-12 navcolor">
+      <!-- Information about the location -->
+      <div class="col-md-12 navcolor">
 
-          <ul class="nav justify-content-center ">
-              <li class="nav-item" id="restaurants">
-                <a class="nav-link active" href="#">Restaurants</a>
-              </li>
-              <li class="nav-item" id="entertainment">
-                <a class="nav-link" href="#">Entertainment</a>
-              </li>
-              <li class="nav-item" id="historic">
-                <a class="nav-link" href="#">Historic</a>
-              </li>
-              <li class="nav-item" id="bars">
-                  <a class="nav-link" href="#">Nightlife</a>
-                </li>
+        <ul class="nav justify-content-center ">
+          <li class="nav-item" id="restaurants">
+            <a class="nav-link active" href="#">Restaurants</a>
+          </li>
+          <li class="nav-item" id="entertainment">
+            <a class="nav-link" href="#">Entertainment</a>
+          </li>
+          <li class="nav-item" id="historic">
+            <a class="nav-link" href="#">Historic</a>
+          </li>
+          <li class="nav-item" id="bars">
+            <a class="nav-link" href="#">Nightlife</a>
+          </li>
 
-            </ul>
+        </ul>
+      </div>
+    </div>
+
+
+
+
+
+
+    <!-- End of Location Section -->
+
+    <!-- Second of two columns -->
+    <div class="row justify-content-center" id="landingPg">
+      <div class="col-md-1"></div>
+
+      <!-- Column Exchange -->
+      <div class="col-md-3">
+        <h1></h1>
+        <div class="card" style="width: 18rem;">
+          <img src="img/banking-business-cent-332304-word.jpg" class="card-img-top img-detail" alt="...">
+          <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Column Saftey -->
+      <div class="col-md-3">
+
+        <div class="card" style="width: 18rem;">
+          <img src="img/SafeTravel.jpg" class="card-img-top img-detail" alt="...">
+          <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+          </div>
+        </div>
+        <h1></h1>
+      </div>
+      <!-- Column Weather -->
+
+      <div class="col-sm-3">
+        <h1></h1>
+        <div class="card" style="width: 18rem;">
+          <img src="img/after-the-rain-blue-blur-1715161-wordBig.jpg" class="card-img-top img-detail" alt="...">
+          <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+          </div>
         </div>
       </div>
 
-
-
-
-
-
-      <!-- End of Location Section -->
-
-         <!-- Second of two columns -->
-  <div class="row justify-content-center" id="landingPg">
       <div class="col-md-1"></div>
+    </div>
 
-    <!-- Column Exchange -->
-         <div class="col-md-3">
-            <h1></h1>
-            <div class="card" style="width: 18rem;">
-                <img src="img/banking-business-cent-332304-word.jpg" class="card-img-top img-detail" alt="...">
-                <div class="card-body">
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-              </div>
-          </div>
- <!-- Column Saftey -->
-          <div class="col-md-3">
+    <!-- Adding the detail based on the select country/city -->
 
-              <div class="card" style="width: 18rem;">
-                  <img src="img/SafeTravel.jpg" class="card-img-top img-detail" alt="...">
-                  <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  </div>
-                </div>
-                <h1></h1>
-            </div>
-             <!-- Column Weather -->
-
-            <div class="col-sm-3">
-                <h1></h1>
-                <div class="card" style="width: 18rem;">
-                    <img src="img/after-the-rain-blue-blur-1715161-wordBig.jpg" class="card-img-top img-detail" alt="...">
-                    <div class="card-body">
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                  </div>
-              </div>
-
-              <div class="col-md-1"></div>
+    <div class="card-deck" id="infoLoc">
+      <div class="card">
+        <!-- <img src="..." class="card-img-top" alt="..."> -->
+        <div class="card-body">
+          <h5 class="card-title">MAP</h5>
+          <p class="card-text"><img class="img-thumbnail" src="img/chuttersnap-176806-unsplash-map.jpg"></p>
         </div>
-
-        <!-- Adding the detail based on the select country/city -->
-
-        <div class="card-deck" id="infoLoc">
-            <div class="card">
-              <!-- <img src="..." class="card-img-top" alt="..."> -->
-              <div class="card-body">
-                <h5 class="card-title">MAP</h5>
-                <p class="card-text"><img class="img-thumbnail" src="img/chuttersnap-176806-unsplash-map.jpg"></p>
-              </div>
-            </div>
-               <!-- Thing to do section -->
-            <div class="card">
-              <div id="toDo"></div>
-              <!-- <div class="card-body">
+      </div>
+      <!-- Thing to do section -->
+      <div class="card">
+        <div id="toDo"></div>
+        <!-- <div class="card-body">
                 <h5 class="card-title">Things to Do</h5>
                 <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
               </div> -->
-            </div>
-            <div class="card">
+      </div>
+      <div class="card">
 
-              <!-- Alert -->
-              <div class="card-body">
-                <div id="safe"></div>
-                <!-- <h5 class="card-title">Travel Safety</h5> -->
-                <!-- <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p> -->
-              </div>
+        <!-- Alert -->
+        <div class="card-body">
+          <div id="safe"></div>
+          <h5 class="card-title">TRAVEL SAFETY ADVISORY</h5>
+         
+          <!-- <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p> -->
+          
+          <!-- Saftey table format start  -->
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Country Name</th>
+                <th>Rating</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="country">
+                <td class="countryName"></td>
+                <td>
+                  <div class="stars-outer">
+                    <div class="stars-inner"></div>
+                  </div>
+                  <span class="number-rating"></span>
+                  <div class="message"></div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
 
-              <!-- Weather -->
-              <hr>
-              <div class="card-body ">
-                <div id="weatherA"></div>
 
-                  <!-- <h5 class="card-title">Weather</h5> -->
-                  <!-- <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p> -->
-                </div>
-            </div>
-          </div>
+          <!-- Saftey table card format end  -->
+        </div>
+
+        <!-- Weather -->
+        <hr>
+        <div class="card-body ">
+          <div id="weatherA"></div>
+        </hr>
+          <!-- <h5 class="card-title">Weather</h5> -->
+          <!-- <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p> -->
+        </div>
+      </div>
+    </div>
 
 
-  <!-- JavaScript file utilizing Javascript -->
-  <!-- <script src="weatherAPP.js"></script> -->
-  <!-- <script src="yelp.js"></script> -->
-  <!-- <script src="exchRate.js"></script> -->
-  <script src="locationImg.js"></script>
-  <script src="location.js"></script>
+    <!-- JavaScript file utilizing Javascript -->
+    <!-- <script src="weatherAPP.js"></script> -->
+    <!-- <script src="yelp.js"></script> -->
+    <!-- <script src="exchRate.js"></script> -->
+    <script src="safety.js"></script>
+    <script src="locationImg.js"></script>
+    <script src="location.js"></script>
 
-  <!-- <script src="app.js"></script> -->
+    <!-- <script src="app.js"></script> -->
 
 
 </body>

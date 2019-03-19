@@ -46,13 +46,16 @@ const runRestaurants = function (event){
      for (let i = 0; i < businesses.length; i++){
        if (businesses[i].rating >= 4){
          console.log(businesses)
+         latitude = businesses[i].coordinates.latitude;
+         longitude = businesses[i].coordinates.longitude;
        $('#toDo').append(`<img class="float-right images" src="${businesses[i].image_url}"  width="180" height="180"></img><br><br><br>`);
-       $('#toDo').append(`<h2 class="card-title bg-light">${businesses[i].name}</h2>`);
+       $('#toDo').append(`<h2 class="card-title bg-light" data-loc-lat="${latitude}" data-loc-log="${longitude}">${businesses[i].name}</h2>`);
        $('#toDo').append(`<p>${businesses[i].location.address1}</p>`);
        $('#toDo').append(`<p>${businesses[i].location.city}, ${businesses[i].location.state}</p>`);
        $('#toDo').append(`<p>${businesses[i].phone}</p>`);
-       latitude = businesses[i].coordinates.latitude
-       longitude = businesses[i].coordinates.longitude;
+
+
+       $('#toDo').attr('data-value')
        }
     }
   })

@@ -23,6 +23,8 @@ function disExch() {
 
         console.log(disNumero)
 
+        $('#exRate').append(`<p>${ccSym}${Math.round(disNumero)} is worth about $1000</p>`)
+
 
         // console.log(filNum);
 
@@ -31,35 +33,4 @@ function disExch() {
     });
 }
 
-$('#add-symbol').on('click', disExch)
-
-// let counI2 = [];
-
-// const testapi = function () {
-//     const url = 'https://cors-anywhere.herokuapp.com/https://www.travel-advisory.info/api'
-    
-//     $.ajax({
-//       url: url,
-//       method: 'GET',
-//       headers: {'Access-Control-Allow-Origin':'*'
-//    }
-//     }).then(function (response) {
-
-//         console.log(response)
-//         let country = response.data.AD.name; 
-//         let score = response.data.AD.advisory.score; 
-
-//         for(i=0; i < response.data.length; i++){
-//             counI2.push(response.data[i].iso_alpha2);
-//         }
-        
-//         console.log(counI2)
-//         // countryList.push(response[i].data.AD.advisory.score);
-//         //  countryList.push(response.data.AD.name);  
-         
-//         console.log(score)
-//          console.log(country)
-//          console.log(country)
-         
-//     })
-//    }
+$('#add-symbol').on('click', disExch);

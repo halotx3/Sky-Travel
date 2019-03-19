@@ -52,7 +52,7 @@ function getcitydetails(fqcn) {
                      function (data) {
 								// jQuery("#geobytesinternet").val(data.geobytesinternet);
 								countryCode = data.geobytesinternet;
-								console.log(`This is the Country code ${countryCode}`);
+								// console.log(`This is the Country code ${countryCode}`);
                 country123 = data.geobytescountry;
                 // console.log(country123);
 	            // jQuery("#geobytescountry").val(data.geobytescountry);
@@ -99,8 +99,8 @@ function getcitydetails(fqcn) {
 				}
  
 			}
-			console.log(response);
-			console.log(iCode);
+			// console.log(response);
+			// console.log(iCode);
 		});
 
                 
@@ -123,13 +123,14 @@ function getcitydetails(fqcn) {
 $(`.btn`).on("click",function(){
 	$(`#landingPg`).hide();
 	$(`#linkMove`).show();
-	$(`#infoLoc`).show();
+  $(`#infoLoc`).show();
+   
 	// newImage();
 	nextImage();
-	console.log(`This is the Country ${country123}`);
-	console.log(region123);
-	console.log(city123);
-	console.log(`This is the Alpha2/Country Code ${iCode}`);
+	// console.log(`This is the Country ${country123}`);
+	// console.log(region123);
+	// console.log(city123);
+	// console.log(`This is the Alpha2/Country Code ${iCode}`);
 
 
 });

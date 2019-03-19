@@ -78,8 +78,8 @@ const newImage = function(event){
           })
           
           .then(function(response) {
-            console.log(response.results[0].urls.raw);          
-                  console.log(response);
+            // console.log(response.results[0].urls.raw);          
+            //       console.log(response);
 
                   const photoRef = response.results[0].urls.raw
                 //   let pictureURL = `https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${photoRef}&key=AIzaSyB_S5w_dRoEXEiiJtMpQ2IL_P7IsHDUaiA`

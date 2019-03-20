@@ -34,6 +34,10 @@ h2{
     margin-left: 0;
 }
 
+.land{
+    border-style: none;
+}
+
 /* End modifications */
 .lat {
   opacity: 0;

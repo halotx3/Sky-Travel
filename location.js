@@ -5,6 +5,7 @@ let iCode ="";
 let region123 = "";
 let cccode123 = "";
 let countryCode = "";
+let ccSym = "";
 
 
 //  Label that shows in the button
@@ -97,7 +98,10 @@ function getcitydetails(fqcn) {
 					iCode = response[i].alpha2Code;
  
 				}
+        if(response[i].name.includes(country123)){
+					ccSym = response[i].currencies[0].symbol;
  
+				}
 			}
 			// console.log(response);
 			// console.log(iCode);

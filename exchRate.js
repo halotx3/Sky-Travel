@@ -22,9 +22,12 @@ function disExch() {
         let disNumero = 1000 * finRate;
 
         console.log(disNumero)
+        const flag = `https://www.countryflags.io/${countryCode}/flat/64.png`
 
-        $('#exRate').append(`<p>${ccSym}${Math.round(disNumero)} is worth about $1000</p>`)
+        const orginflag = `https://www.countryflags.io/us/flat/64.png`
 
+        $('#exRate').append(`<h5>Exchange Rate</h5><img src = ${flag} class = "imgRou">${ccSym}${Math.round(disNumero)} = </img> <img src = ${orginflag} class = "imgRou">$1000</img>`)
+        // $(`#linkMove`).prepend(`<h1 class"justify-content-center">${city123}, ${country123}</h1>`)
 
         // console.log(filNum);
 

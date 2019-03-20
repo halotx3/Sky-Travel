@@ -9,7 +9,6 @@ h2:hover{
 
 }
 
-/* Made modifications here */
 
 .mainBanner{
     position: relative;
@@ -19,7 +18,7 @@ h2:hover{
     min-height: 1px;
     padding-left: 16px;
     padding-right: 16px;
-    /* margin-bottom: 150px; */
+    
 }
 
 
@@ -39,7 +38,14 @@ h2:hover{
     border-style: none;
 }
 
-/* End modifications */
+.exSpace{
+    margin: -15px;
+    /* font-family: 'Fredericka the Great', cursive; */
+    /* font-family: 'Rock Salt', cursive; */
+    font-weight: bold;
+}
+
+
 .lat {
   opacity: 0;
 }
@@ -67,6 +73,21 @@ h2:hover{
 
 a{
     font-size: 20px;
+}
+
+.nav-link{
+    /* font-family: 'Rock Salt', cursive; */
+    /* font-family: 'Fredericka the Great', cursive; */
+    font-weight: bold;
+}
+
+.imgRou{
+    border-radius: 50%;
+    height: 31px;
+}
+
+#linkMove{
+    /* margin: -40px; */
 }
 
 .navcolor{

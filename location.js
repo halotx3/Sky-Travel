@@ -127,6 +127,8 @@ $(`.btn`).on("click",function(){
    
 	// newImage();
 	nextImage();
+	getWeatherData();
+	// getLocation();
 	// console.log(`This is the Country ${country123}`);
 	// console.log(region123);
 	// console.log(city123);

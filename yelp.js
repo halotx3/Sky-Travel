@@ -49,6 +49,7 @@ const runRestaurants = function (event){
        if (businesses[i].rating >= 4){
          latitude = businesses[i].coordinates.latitude;
          longitude = businesses[i].coordinates.longitude;
+
          $('#toDo').append(`<img class="float-right images" src="${businesses[i].image_url}" align="right" width="160" height="160"></img><br>`);
          $('#toDo').append(`<h2 id="${i}" class="bg-light" data-lat="${latitude}" data-long="${longitude}">${businesses[i].name}</h2>`);
          $('#toDo').append(`<p> ${businesses[i].location.address1}</p>`);

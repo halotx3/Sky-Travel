@@ -1,36 +1,25 @@
+let isLat = "";
+let isLong = "";
+
+
+
 const runmaps = function (){
 
   $('#maps').empty();
 
-  // let yelpURL = `https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?&location=${location}`
-  // let apiKey = 'Bearer Eg5mm-1rhlDzCfKO0hWK76f3iUiRBjk1EDj1yL4SysqyFHmzWCzRTVj0JEfBMuIOX7d1YmaVkKqBoE4kXvZLfawK6DO3uhegkyU7kDRqRDPqI69AqIUrYxkCaw6DXHYx'
-  //
-  // $.ajax({
-  //     url: url,
-  //     headers: {
-  //       'Authorization': ${apiKey}
-  //     },
-  //     method: 'GET'
-  // }).then(function(data) {
-  //   let coordinates = data.coordinates
-  //   for (let i = 0; i < coordinates.length; i++){
-  //
-  //   }
-  //
-  // })
 
+  let bingapiKey = 'All76BMDd7uSLFuD_JOKaiN4s6oks1eCPeu57VjZhtGU2Et3LZmQbobQPf0hmns5'
+  // http://dev.virtualearth.net/REST/v1/Imagery/Map/Road/47.619048,-122.35384/15?mapSize=500,500&pp=47.620495,-122.34931;21;AA&pp=47.619385,-122.351485;;AB&pp=47.616295,-122.3556;22&mapMetadata=1&o=xml&key={BingMapsAPIKey}
+  let bingurl = `https://cors-anywhere.herokuapp.com/http://dev.virtualearth.net/REST/v1/Imagery/Map/Road/${isLat},${isLong}/15?mapSize=550,550&pp${isLat},${isLong}i&key=${bingapiKey}`
 
-  // let bingapiKey = 'All76BMDd7uSLFuD_JOKaiN4s6oks1eCPeu57VjZhtGU2Et3LZmQbobQPf0hmns5'
-  // let binhgurl = `https://cors-anywhere.herokuapp.com/http://dev.virtualearth.net/REST/v1/Locations/40.74007,-73.99344?i&key=${bingapiKey}`
-  //
-  //
-  // $.ajax({
-  //     url: url,
-  //     method: 'GET'
-  // }).then(function(data) {
-  //   console.log(data)
-  //
-  // })
+  // http://dev.virtualearth.net/REST/v1/Imagery/Map/Road/25.7991505920703,-80.1271524263234/15?mapSize=500,500;&pp=25.7991505920703,-80.1271524263234&key=All76BMDd7uSLFuD_JOKaiN4s6oks1eCPeu57VjZhtGU2Et3LZmQbobQPf0hmns5
+  $.ajax({
+      url: bingurl,
+      method: 'GET'
+  }).then(function(data) {
+    $('#maps').append(`<img src="${bingurl}"></img>`);
+
+  })
   }
 
 const findLocation = function (){
@@ -38,4 +27,4 @@ const findLocation = function (){
   let longitude = '';
 
 }
-$('.images').on('click', runmaps)
+$('.card-title').on('click', runmaps)

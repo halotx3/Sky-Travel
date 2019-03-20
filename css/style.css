@@ -4,20 +4,47 @@
     /* margin: auto; */
 }
 
-h2{
+h2:hover{
+  color: blue;
 
 }
 
+
 .mainBanner{
-    position: fixed;
+    position: relative;
     z-index: 999;
     margin-left: 35%;
-    top: 20%;
+    top: -322px;
     min-height: 1px;
     padding-left: 16px;
     padding-right: 16px;
-    /* margin-bottom: 150px; */
+    
 }
+
+
+
+.form-control-lg {
+
+    width: 354px;
+}
+
+.card-deck .card{
+
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.land{
+    border-style: none;
+}
+
+.exSpace{
+    margin: -15px;
+    /* font-family: 'Fredericka the Great', cursive; */
+    /* font-family: 'Rock Salt', cursive; */
+    font-weight: bold;
+}
+
 
 .lat {
   opacity: 0;
@@ -48,6 +75,21 @@ a{
     font-size: 20px;
 }
 
+.nav-link{
+    /* font-family: 'Rock Salt', cursive; */
+    /* font-family: 'Fredericka the Great', cursive; */
+    font-weight: bold;
+}
+
+.imgRou{
+    border-radius: 50%;
+    height: 31px;
+}
+
+#linkMove{
+    /* margin: -40px; */
+}
+
 .navcolor{
     background: #CBD7D7;
 }
@@ -76,35 +118,35 @@ a{
 
    /* Safety CSS design start  */
 .stars-outer {
-    position: relative; 
+    position: relative;
     display: inline-block;
 }
 
 .stars-inner {
     position: absolute;
-    top: 0; 
-    left: 0; 
-    white-space: nowrap; 
-    overflow: hidden; 
-    width: 0; 
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
 }
 
 .stars-outer::before {
-    content: "\f005 \f005 \f005 \f005 \f005"; 
-    font-family: 'Font Awesome 5 Free'; 
+    content: "\f005 \f005 \f005 \f005 \f005";
+    font-family: 'Font Awesome 5 Free';
     font-weight: 900;
-    color: #ccc;  
+    color: #ccc;
 }
 
 .stars-inner::before {
-    content: "\f005 \f005 \f005 \f005 \f005"; 
-    font-family: 'Font Awesome 5 Free'; 
+    content: "\f005 \f005 \f005 \f005 \f005";
+    font-family: 'Font Awesome 5 Free';
     font-weight: 900;
-    color: #f8ce0b;  
+    color: #f8ce0b;
 }
 
 /* Safety CSS design end */
-#toDo,#maps {
+#toDo {
   padding-top: 20px;
   padding-left: 20px;
 }

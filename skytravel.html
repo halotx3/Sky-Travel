@@ -14,6 +14,10 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
     integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
+
   <!-- Bootstrap Javascript & Css -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -68,9 +72,9 @@
       <div class="col-sm-6 skysize">
 
         <!-- Exchange Rate information -->
-        <div class="nav justify-content-end">
-          <div class=" card exrate" style="width: 18rem;">
-            <div class="card-body">
+        <div class="nav justify-content-end ">
+          <div class=" card exrate land" style="width: 18rem;">
+            <div class="card-body exSpace">
               <div id="exRate"></div>
               <!-- <h5 class="card-title">exchange rate</h5> -->
             </div>
@@ -152,22 +156,20 @@
       <!-- Column Exchange -->
       <div class="col-md-3">
         <h1></h1>
-        <div class="card" style="width: 18rem;">
+        <div class="card land" style="width: 18rem;">
           <img src="img/banking-business-cent-332304-word.jpg" class="card-img-top img-detail" alt="...">
           <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
+
           </div>
         </div>
       </div>
       <!-- Column Saftey -->
       <div class="col-md-3">
 
-        <div class="card" style="width: 18rem;">
+        <div class="card land" style="width: 18rem;">
           <img src="img/SafeTravel.jpg" class="card-img-top img-detail" alt="...">
           <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
+
           </div>
         </div>
         <h1></h1>
@@ -176,11 +178,10 @@
 
       <div class="col-sm-3">
         <h1></h1>
-        <div class="card" style="width: 18rem;">
+        <div class="card land" style="width: 18rem;">
           <img src="img/after-the-rain-blue-blur-1715161-wordBig.jpg" class="card-img-top img-detail" alt="...">
           <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
+
           </div>
         </div>
       </div>
@@ -202,28 +203,22 @@
             </div>
                <!-- Thing to do section -->
             <div class="card">
-              <div class="col-sm-8 card-title" id="toDo"></div>
-              <div class="col-sm-4 card-body"></div>
+              <div class="col-sm-12 card-title" id="toDo"></div>
+              <div class="col-sm-6 card-body"></div>
 
             </div>
-            </div>
+
             <div class="card">
 
               <!-- Alert -->
         <div class="card-body">
           <div id="safe"></div>
           <h5 class="card-title">TRAVEL SAFETY ADVISORY</h5>
-         
+
           <!-- <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p> -->
-          
+
           <!-- Saftey table format start  -->
           <table class="table table-striped">
-            <thead>
-              <tr>
-                <th>Country Name</th>
-                <th>Rating</th>
-              </tr>
-            </thead>
             <tbody>
               <tr class="country">
                 <td class="countryName"></td>
@@ -241,6 +236,7 @@
 
           <!-- Saftey table card format end  -->
         </div>
+
 
               <!-- Weather -->
               <hr>
@@ -280,13 +276,14 @@
                 </div>
             </div>
           </div>
+        </div>
 
 
   <!-- JavaScript file utilizing Javascript -->
   <script src="weatherApp.js"></script>
   <script src="yelp.js"></script>
   <script src="map.js"></script>
-  <!-- <script src="exchRate.js"></script> -->
+  <script src="exchRate.js"></script>
   <script src="locationImg.js"></script>
   <script src="location.js"></script>
   <script src="safety.js"></script>

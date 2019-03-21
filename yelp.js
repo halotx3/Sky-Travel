@@ -81,7 +81,7 @@ const runEntertainment = function (event){
       if (businesses[i].rating = 5){
         latitude = businesses[i].coordinates.latitude;
         longitude = businesses[i].coordinates.longitude;
-        $('#toDo').append(`<img class="float-right images" src="${businesses[i].image_url}" width="160" height="160"></img><br>`);
+        $('#toDo').append(`<img class="float-right images" src="${businesses[i].image_url}" width="160" height="160"></img><br><br>`);
         $('#toDo').append(`<h2 id="${i}" class="bg-light" data-lat="${latitude}" data-long="${longitude}">${businesses[i].name}</h2>`);
         $('#toDo').append(`<p> ${businesses[i].location.address1}</p>`);
         $('#toDo').append(`<p> ${businesses[i].location.city}</p>`);
@@ -113,7 +113,7 @@ const runHistoric = function (event){
       if (businesses[i].rating >= 4){
         latitude = businesses[i].coordinates.latitude;
         longitude = businesses[i].coordinates.longitude;
-        $('#toDo').append(`<img class="float-right images" src="${businesses[i].image_url}" width="160" height="160"></img><br>`);
+        $('#toDo').append(`<img class="float-right images" src="${businesses[i].image_url}" width="160" height="160"></img><br><br>`);
         $('#toDo').append(`<h2 id="${i}" class="bg-light" data-lat="${latitude}" data-long="${longitude}">${businesses[i].name}</h2>`);
         $('#toDo').append(`<p> ${businesses[i].location.address1}</p>`);
         $('#toDo').append(`<p> ${businesses[i].location.city}</p>`);

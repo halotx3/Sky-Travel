@@ -187,3 +187,26 @@ table {
     font-style: italic;
 }
 /* End Weather CSS */
+/*
+Adding in Media Queries to improve responsiveness
+*/
+@media screen and (max-width: 980px) {
+    .mainBanner {
+        position: absolute;
+        top: 45%;
+        margin: 0, auto;
+    }
+    .p-center {
+        width: 100%;
+    }
+    .images {
+        display: hidden;
+    }
+}
+@media screen and (max-width: 780px) {
+    .logo {
+        display: visible;
+    }
+}
+@media screen and (max-width: 640px) {
+}

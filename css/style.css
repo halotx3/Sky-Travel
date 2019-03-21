@@ -10,6 +10,10 @@ h2:hover{
 
 }
 
+h4{
+    font-size: 20px;
+}
+
 
 .mainBanner{
     position: absolute;
@@ -19,13 +23,13 @@ h2:hover{
     min-height: 1px;
     padding-left: 16px;
     padding-right: 16px;
-    
+
 }
 
 #cityCountry{
     /* font-size: 30px; */
     text-align: center;
-  
+
 
 }
 #removeTitle{
@@ -69,7 +73,7 @@ h2:hover{
 
 .exrate{
       float: left;
-      height: 25px;
+      
 }
 
 .logo{
@@ -165,9 +169,9 @@ a{
 /* Weather CSS */
 table {
     font-family: arial, sans-serif;
-    border-collapse: collapse;   
+    border-collapse: collapse;
   }
-  
+
   td, th {
     border: 1px solid #dddddd;
     font-style: italic;
@@ -175,16 +179,10 @@ table {
     padding: 8px;
   }
 
-  .forecastData {
-    background-color: #e3e9f0;
-    width: 100%;
-    overflow: hidden;
-    font-style: italic;
-}
-
 .weatherData {
-     background-color: #e3e9f0;
-     width: 100%;
+    /* background-image:url(http://equalmotion.com/wp-content/uploads/2016/12/space-needle.jpg); */
+    /* border: 5px solid red; */
+    width: 100%;
     overflow: hidden;
     font-style: italic;
 }

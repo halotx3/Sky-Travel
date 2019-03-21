@@ -27,7 +27,7 @@ function disExch() {
         const orginflag = `https://www.countryflags.io/us/flat/64.png`
 
         $('#exRate').append(`<h5>Exchange Rate</h5><img src = ${flag} class = "imgRou">${ccSym}${Math.round(disNumero)} = </img> <img src = ${orginflag} class = "imgRou">$1000</img>`)
-        // $(`#linkMove`).prepend(`<h1 class"justify-content-center">${city123}, ${country123}</h1>`)
+        $(`#cityCountry`).prepend(`<h3 class"justify-content-center" id="removeTitle">${city123}, ${country123}</h3>`)
 
         // console.log(filNum);
 

@@ -1,6 +1,7 @@
 .p-center{
-    width: 100%;
+    width: 100vw;
     height: 600px;
+    object-fit: cover;
     /* margin: auto; */
 }
 
@@ -11,16 +12,25 @@ h2:hover{
 
 
 .mainBanner{
-    position: relative;
+    position: absolute;
     z-index: 999;
     margin-left: 35%;
-    top: -322px;
+    top: 40%;
     min-height: 1px;
     padding-left: 16px;
     padding-right: 16px;
     
 }
 
+#cityCountry{
+    /* font-size: 30px; */
+    text-align: center;
+  
+
+}
+#removeTitle{
+  margin-top: 4%;
+}
 
 
 .form-control-lg {

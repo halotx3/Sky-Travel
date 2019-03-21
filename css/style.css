@@ -164,10 +164,16 @@ table {
     padding: 8px;
   }
 
-.weatherData {
-    /* background-image:url(http://equalmotion.com/wp-content/uploads/2016/12/space-needle.jpg); */
-    /* border: 5px solid red; */
+  .forecastData {
+    background-color: #e3e9f0;
     width: 100%;
+    overflow: hidden;
+    font-style: italic;
+}
+
+.weatherData {
+     background-color: #e3e9f0;
+     width: 100%;
     overflow: hidden;
     font-style: italic;
 }

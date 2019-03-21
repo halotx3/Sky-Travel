@@ -10,6 +10,10 @@ h2:hover{
 
 }
 
+h4{
+    font-size: 20px;
+}
+
 
 .mainBanner{
     position: absolute;
@@ -69,7 +73,7 @@ h2:hover{
 
 .exrate{
       float: left;
-      height: 25px;
+      
 }
 
 .logo{
@@ -175,16 +179,10 @@ table {
     padding: 8px;
   }
 
-  .forecastData {
-    background-color: #e3e9f0;
-    width: 100%;
-    overflow: hidden;
-    font-style: italic;
-}
-
 .weatherData {
-     background-color: #e3e9f0;
-     width: 100%;
+    /* background-image:url(http://equalmotion.com/wp-content/uploads/2016/12/space-needle.jpg); */
+    /* border: 5px solid red; */
+    width: 100%;
     overflow: hidden;
     font-style: italic;
 }

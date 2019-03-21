@@ -59,20 +59,19 @@
        
        //Current weather row 
        var weatherHTML = document.getElementById("city");
-       document.getElementById("city2").innerHTML = "<h4> Current weather: " + location  + "</h4>";
-       var iconURL = document.getElementById("weather-icon").innerHTML = "<img src='http://openweathermap.org/img/w/" + iconID + ".png' height='125' width='125'></img>";
+       var iconURL = document.getElementById("weather-icon").innerHTML = "<img src='http://openweathermap.org/img/w/" + iconID + ".png' height='100' width='115'></img>";
        var tempUnit = '°F';
-       document.getElementById("current").innerHTML = "<h2>" + temp + tempUnit + "</h2>";
-       document.getElementById("description").innerHTML = "<h3>   " + description + "</h3>";
+       document.getElementById("current").innerHTML = "<h4>" + temp + tempUnit + "</h4>";
+       document.getElementById("description").innerHTML = "<p>   " + description + "<p>";
        // End Current weather row 
 
        //Forcast row
        document.getElementById("forcast-day").innerHTML = "5-Day Forecast";
-       document.getElementById("1day").innerHTML = "<h3>" + day1temp + tempUnit + "</h3>" + "<p> " + day1desc + "</p>";
-       document.getElementById("2day").innerHTML = "<h3>" + day2temp + tempUnit + "</h3>" + "<p> " + day2desc + "</p>";
-       document.getElementById("3day").innerHTML = "<h3>" + day3temp + tempUnit + "</h3>" + "<p> " + day3desc + "</p>";
-       document.getElementById("4day").innerHTML = "<h3>" + day4temp + tempUnit + "</h3>" + "<p> " + day4desc + "</p>";
-       document.getElementById("5day").innerHTML = "<h3>" + day4temp + tempUnit + "</h3>" + "<p> " + day5desc + "</p>";
+       document.getElementById("1day").innerHTML = "<h4>" + day1temp + tempUnit + "</h4>" + "<p> " + day1desc + "</p>";
+       document.getElementById("2day").innerHTML = "<h4>" + day2temp + tempUnit + "</h4>" + "<p> " + day2desc + "</p>";
+       document.getElementById("3day").innerHTML = "<h4>" + day3temp + tempUnit + "</h4>" + "<p> " + day3desc + "</p>";
+       document.getElementById("4day").innerHTML = "<h4>" + day4temp + tempUnit + "</h4>" + "<p> " + day4desc + "</p>";
+       document.getElementById("5day").innerHTML = "<h4>" + day4temp + tempUnit + "</h4>" + "<p> " + day5desc + "</p>";
 
             
 }

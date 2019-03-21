@@ -19,13 +19,13 @@ h2:hover{
     min-height: 1px;
     padding-left: 16px;
     padding-right: 16px;
-    
+
 }
 
 #cityCountry{
     /* font-size: 30px; */
     text-align: center;
-  
+
 
 }
 #removeTitle{
@@ -165,9 +165,9 @@ a{
 /* Weather CSS */
 table {
     font-family: arial, sans-serif;
-    border-collapse: collapse;   
+    border-collapse: collapse;
   }
-  
+
   td, th {
     border: 1px solid #dddddd;
     font-style: italic;

@@ -10,6 +10,10 @@ h2:hover{
 
 }
 
+h4{
+    font-size: 20px;
+}
+
 
 .mainBanner{
     position: absolute;
@@ -69,7 +73,7 @@ h2:hover{
 
 .exrate{
       float: left;
-      height: 25px;
+      
 }
 
 .logo{
@@ -175,17 +179,34 @@ table {
     padding: 8px;
   }
 
-  .forecastData {
-    background-color: #e3e9f0;
+.weatherData {
+    /* background-image:url(http://equalmotion.com/wp-content/uploads/2016/12/space-needle.jpg); */
+    /* border: 5px solid red; */
     width: 100%;
     overflow: hidden;
     font-style: italic;
 }
-
-.weatherData {
-     background-color: #e3e9f0;
-     width: 100%;
-    overflow: hidden;
-    font-style: italic;
-}
 /* End Weather CSS */
+/*
+Adding in Media Queries to improve responsiveness
+*/
+@media screen and (max-width: 980px) {
+    .mainBanner {
+        position: absolute;
+        top: 45%;
+        margin: 0, auto;
+    }
+    .p-center {
+        width: 100%;
+    }
+    .images {
+        display: hidden;
+    }
+}
+@media screen and (max-width: 780px) {
+    .logo {
+        display: visible;
+    }
+}
+@media screen and (max-width: 640px) {
+}

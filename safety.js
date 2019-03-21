@@ -42,10 +42,11 @@ const testapi = function (event) {
                 // (2.6/5)*100 = gets the percentage
 
                 //Round to the nearest 10
-                // const starPercentageRounded = `${Math.round(starPercentage / 10) * 10}%`;
+                const starPercentageRounded = `${Math.round(starPercentage / 10) * 10}%`;
+                console.log(`starPercentageRounded ${starPercentageRounded}`);
                 const starPercentageRoundedReverse = `${100-Math.round(starPercentage / 10) * 10}%`;
 
-                console.log(`starPercentageRound ${starPercentageRoundedReverse}`);
+                console.log(`starPercentageRoundRevised ${starPercentageRoundedReverse}`);
                 $('.country').addClass(`${rating}`);
                 $('.countryName').append(`${response.data[iCode].name}`);
                 //Set width of stars -inner to percentage

@@ -65,7 +65,7 @@ const newImage = function(event){
         const unsplashKey = `b5970b91de7abb8c539c033b97560c2844c67745ee6579578bacbe7def09e3c5`
 
         // let countryPic = city123 + "%20" + region123 + "%20"+ country123;
-        let countryPic = city123 + "%20"+ country123;
+        let countryPic = city123 + "%20"+ region123 + "%20"+ country123;
         let locationPicURL = `https://api.unsplash.com/search/photos?query=${countryPic}&client_id=${unsplashKey}`
         // let locationPicURL = `https://api.unsplash.com/search/photos?query=${country123}&client_id=${unsplashKey}`
         

@@ -19,6 +19,8 @@ const testapi = function (event) {
         let ratings = {
             [`${response.data[iCode].name}`]: `${response.data[iCode].advisory.score}`
         }
+        console.log(`Top Rating ${ratings}`);
+        console.log(ratings);
 
         // console.log(ratings);
 
@@ -30,22 +32,24 @@ const testapi = function (event) {
             //Displays message from the api
             let message = `<p>${response.data[iCode].advisory.message}</p>`
             $('.message').append(message);
-            // console.log(message); 
+            console.log(message); 
 
             for (let rating in ratings) {
                 //Get Percentage
                 const starPercentage = (ratings[rating] / starsTotal) * 100;
+                console.log(`starPercentage ${starPercentage}`);
 
 
                 //Round to the nearest 10
                 const starPercentageRounded = `${Math.round(starPercentage / 10) * 10}%`;
+                console.log(`starPercentageRound ${starPercentageRounded}`);
                 $('.country').addClass(`${rating}`);
                 $('.countryName').append(`${response.data[iCode].name}`);
                 //Set width of stars -inner to percentage
                 document.querySelector(`.country .stars-inner`).style.width = starPercentageRounded;
 
-                // console.log(`This is the Alpha2/Country Code ${iCode}`);
-                // console.log(rating);
+                console.log(`This is the Alpha2/Country Code ${iCode}`);
+                console.log(`Rating of the information ${rating}`);
             }
         }
 

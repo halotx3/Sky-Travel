@@ -22,6 +22,15 @@ h2:hover{
     
 }
 
+#cityCountry{
+    /* font-size: 30px; */
+    text-align: center;
+  
+
+}
+#removeTitle{
+  margin-top: 4%;
+}
 
 
 .form-control-lg {
